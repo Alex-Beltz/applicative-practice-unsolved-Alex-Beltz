@@ -5,8 +5,12 @@ import { data } from "../data/data";
 // Return example: 1902
 
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let count = data.asteroids.reduce((acc, a) => {
+    acc[a.discoveryYear] = (acc[a.discoveryYear] || 0) + 1;
+    return acc;
+  }, {});
+  let sorted = Object.entries(count).sort((a, b) => b[1] - a[1]);
+  return Number(sorted[0][0]);
 }
 
 // === TEST YOURSELF ===

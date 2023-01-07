@@ -6,9 +6,13 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
+
+  /*initially tried filter but for some reason returned all objects
+  map seems like the wrong method since I'm not looking to transfor anything..*/
+  // data.planets.filter(planet => planet.name);
+
+  return data.planets.map((planet) => planet.name);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"

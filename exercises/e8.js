@@ -5,10 +5,15 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
+  let planet = data.planets
+    .filter((p) => {
+      if (p.moons && p.moons.includes(moonName)) {
+        return p.name;
+      }
+    })
+    .map((p) => p.name);
+  return planet[0];
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"

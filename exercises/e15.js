@@ -5,10 +5,8 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsWithNoMoons(data) {
-  // Your code goes here...
+  return data.planets.filter((p) => !p.moonsCount).map((p) => p.name);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"
