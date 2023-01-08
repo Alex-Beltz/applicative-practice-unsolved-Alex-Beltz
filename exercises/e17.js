@@ -2,13 +2,19 @@
 and with an empty array but won't pass the test for some reason*/
 
 /*export function minBy(array, cb) {
-let ages = array.map(p => p.age)
+  if (array.length < 1) {
+    return undefined
+   }
+  let ages = array.map(p => p.age)
   let lowest = cb(ages).shift()
   return array.filter(p => p.age === lowest)[0]
 }
 
 export function maxBy(array, cb) {
-let ages = array.map(p => p.age)
+  if (array.length < 1) {
+    return undefined
+   }
+  let ages = array.map(p => p.age)
   let highest = cb(ages).pop()
   return array.filter(p => p.age === highest)[0]
 }
