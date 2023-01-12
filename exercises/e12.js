@@ -5,9 +5,11 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
+  // they don't all have moons so it fails if I don't use the filter,
+  // and the "cur || 0" for .reduce doesn't work in this situation for some reason
   return data.planets
-    .filter((p) => p.moonsCount)
-    .reduce((acc, p) => (acc += p.moonsCount), 0);
+    .filter((planet) => planet.moonsCount)
+    .reduce((acc, planet) => (acc += planet.moonsCount), 0);
 }
 
 // === TEST YOURSELF ===

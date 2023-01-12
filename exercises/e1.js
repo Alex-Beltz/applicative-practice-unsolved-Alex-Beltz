@@ -5,12 +5,6 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetNames(data) {
-  // Your code goes here...
-
-  /*initially tried filter but for some reason returned all objects
-  map seems like the wrong method since I'm not looking to transfor anything..*/
-  // data.planets.filter(planet => planet.name);
-
   return data.planets.map((planet) => planet.name);
 }
 
