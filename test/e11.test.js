@@ -7,9 +7,14 @@ describe("lowMoonsPlanets", () => {
     expect(lowMoonsPlanets).toBeInstanceOf(Function);
   });
   it("Should return an array of 2 items", () => {
-    expect(lowMoonsPlanets(data).length).toEqual(2);
+    expect(lowMoonsPlanets(data).length).toEqual(4);
   });
   it("The items names should be 'Mars' and 'Earth'", () => {
-    expect(lowMoonsPlanets(data)).toEqual([ 'Mars', 'Earth' ]);
+    expect(lowMoonsPlanets(data)).toEqual([
+      "Mars",
+      "Mercure",
+      "Earth",
+      "Vénus",
+    ]);
   });
 });
